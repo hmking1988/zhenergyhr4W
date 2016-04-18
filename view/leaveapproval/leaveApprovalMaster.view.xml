@@ -1,0 +1,68 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.leaveapproval.leaveApprovalMaster" xmlns:sap.ui.core.mvc="sap.ui.core.mvc"
+	xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m">
+	<Page navButtonPress="back" showNavButton="true" title="请假审批">
+		<headerContent>
+			<Button icon="sap-icon://refresh" press="reloadData"/>
+		</headerContent>
+		<content>
+			<List id="restaa"></List>
+			<!--<List id="restaa" items="{path: '/results', sorter: { path: 'CreatedOn', descending: true, group: false }}" noDataText="无数据">-->
+			<!--	<items>-->
+			<!--		<CustomListItem counter="0" press="handleListItemPress" type="Navigation">-->
+			<!--			<content>-->
+			<!--				<HBox width="100%">-->
+			<!--					<items>-->
+			<!--						<VBox alignItems="Center" direction="Column" height="55px" justifyContent="Center" width="5%"></VBox>-->
+			<!--						<VBox alignItems="Start" direction="Column" height="55px" justifyContent="Center" width="75%">-->
+			<!--							<layoutData>-->
+			<!--								<FlexItemData alignSelf="Stretch"></FlexItemData>-->
+			<!--							</layoutData>-->
+			<!--							<items>-->
+			<!--								<ObjectAttribute active="false" text="{TaskTitle}">-->
+			<!--									<layoutData>-->
+			<!--										<FlexItemData alignSelf="Stretch"></FlexItemData>-->
+			<!--									</layoutData>-->
+			<!--								</ObjectAttribute>-->
+			<!--								<ObjectAttribute active="false" text="{CreatedByName}">-->
+			<!--									<layoutData>-->
+			<!--										<FlexItemData alignSelf="Stretch"></FlexItemData>-->
+			<!--									</layoutData>-->
+			<!--								</ObjectAttribute>-->
+			<!--							</items>-->
+			<!--						</VBox>-->
+			<!--						<VBox alignItems="End" direction="Column" height="55px" justifyContent="End" width="20%">-->
+			<!--							<layoutData>-->
+			<!--								<FlexItemData alignSelf="Stretch"></FlexItemData>-->
+			<!--							</layoutData>-->
+			<!--							<items>-->
+			<!--								<Label text="{path: 'CreatedOn',formatter: '.dateformatter'}">-->
+			<!--									<layoutData>-->
+			<!--										<FlexItemData alignSelf="Stretch"></FlexItemData>-->
+			<!--									</layoutData>-->
+			<!--								</Label>-->
+			<!--								<ObjectStatus state="{ path: 'Status', formatter: '.status' }" text="{path: 'Status', formatter: '.statustext'}"/>-->
+			<!--							</items>-->
+			<!--						</VBox>-->
+			<!--					</items>-->
+			<!--				</HBox>-->
+			<!--			</content>-->
+			<!--			<customData>-->
+			<!--				<sap.ui.core:CustomData value="{InstanceID}"></sap.ui.core:CustomData>-->
+			<!--				<sap.ui.core:CustomData value="{TaskTitle}"></sap.ui.core:CustomData>-->
+			<!--			</customData>-->
+			<!--		</CustomListItem>-->
+			<!--	</items>-->
+			<!--</List>-->
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<Button icon="sap-icon://home" press="back"></Button>
+					<ToolbarSpacer></ToolbarSpacer>
+					<!--<Button icon="sap-icon://approvals" press="approvalListPress"></Button>-->
+					<!--<Button icon="sap-icon://add" press="newApplicationPress"></Button>-->
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</sap.ui.core.mvc:View>

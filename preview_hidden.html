@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{"com.zhenergy.hr": "./"}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		<link rel="stylesheet" type="text/css" href="css/personalinfoStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/roster.css">
+		<script type="text/javascript">
+		  /*=====================================================================
+		   The following onError function is used to trap any errors that occur
+		   while the application is running. Cordova fails silently whenever it
+		   encounters an error in HTML or JavaScript code. So, with that being
+		   the case, developers cannot tell when/why their applications are
+		   failing. Any code error will cause the function to fire and display
+		   the error in an alert dialog.
+		   ======================================================================*/
+		  window.onerror = function(msg, url, line) {
+			var idx = url.lastIndexOf("/");
+			if (idx > -1) {
+			  url = url.substring(idx + 1);
+			}
+// 			alert("ERROR in " + url + " (line #" + line + ")\n" + msg);
+            // sap.Logger.error(msg);
+    //         sap.m.MessageBox.show(
+    // 			"发生错误，确认提交日志?", {
+    // 				icon: sap.m.MessageBox.Icon.NONE,
+    // 				title: "确认",
+    // 				actions: [sap.m.MessageBox.Action.YES, sap.m.MessageBox.Action.NO],
+    // 				onClose: function(oAction) {
+    // 					if (oAction == "YES") {
+    // 						sap.Logger.upload(function() {
+    // 						    sap.m.MessageToast.show("上传成功");
+    //                             // alert("Upload Successful");
+    //                         }, function(e) {
+    //                             sap.m.MessageToast.show("上传失败，状态码：" + e.statusCode + "，错误信息："+ e.statusMessage);
+    //                             // alert("Upload Failed. Status: " + e.statusCode + ", Message: " + e.statusMessage);
+    //                         });
+    // 					}
+    // 				}
+    // 			}
+    // 		);
+// 			console.error(msg);
+			return false;
+		  };
+		</script>
+		
+        <script type="text/javascript" src="js/dateFormat.js"></script>
+		<link href="css/pageConsultantTaskStyle.css" rel="stylesheet" type="text/css" />
+		<script>
+				function getUrlParameterName(sParam)
+				{
+					var sPageURL = window.location.search.substring(1);
+					var sURLVariables = sPageURL.split('&');
+					for (var i = 0; i < sURLVariables.length; i++) 
+					{
+						var sParameterName = sURLVariables[i].split('=');
+						if (sParameterName[0] === sParam) 
+						{
+							return true;
+						}
+					}
+					return false;
+				} 
+			    
+			    
+			 //   if(window.cordova && appContext && !window.sap_webide_companion) {
+    //                 var usrid = appContext.registrationContext.user.toUpperCase();
+    //                 var pwd =appContext.registrationContext.password;
+    //     		} else {
+    //     			var usrid = "AC-SHENFT";
+    //                 var pwd ="sap123456";
+    //     		}
+			    var payDetailTitle="";
+			    //用于离线
+                var online;
+                var bpm_url="znbb-bpmd-01.zhenergy.com.cn";
+                var ecc_url="znbb-erpd-01.zhenergy.com.cn";
+                var clientid="200";
+			    var appId = "com.zhenergy.hr";
+                var store = null; //Offline OData store
+                jQuery.sap.require("sap.ui.thirdparty.datajs");
+            
+				sap.ui.localResources("view");
+				var app = new sap.m.App({initialPage:"idlaunchpad"});
+				
+				//每个tile注册一个splitApp，用于内部导航
+			    var restRequest = sap.ui.jsview("idrestRequestSplitApp", "com.zhenergy.hr.view.pagerestrequest.restRequestSplitApp");
+				app.addPage(restRequest);
+				
+				var pageConsultantTask = sap.ui.jsview("pageConsultantTask", "com.zhenergy.hr.view.pageconsultanttask.pageConsultantTaskSplitApp");
+				app.addPage(pageConsultantTask);
+			
+    			var idPersonalInfoSplitApp,myNewTeam;
+
+				// var leaveApproval = sap.ui.jsview("idleaveApprovalSplitApp", "com.zhenergy.hr.view.leaveapproval.leaveApprovalSplitApp");
+				// app.addPage(leaveApproval);
+				
+				var logout = sap.ui.view({id:"idlogout", viewName:"com.zhenergy.hr.view.logout.logout", type:sap.ui.core.mvc.ViewType.XML  });
+				app.addPage(logout);
+				// var  roster= sap.ui.jsview("idrosterSplitApp", "com.zhenergy.hr.view.roster.rosterSplitApp");
+				// app.addPage(roster);
+			
+			
+				//加载标示，用于解决打开离线过慢的问题
+			    var busyDialog = new sap.m.BusyDialog();
+				
+				//开始加载  
+				function startApp(context) {
+				    setModel()//网页端测试
+				}
+				
+				//设置数据模型
+				function setModel(){
+				    var oModel;
+                    var sServiceUrl = "/sap/opu/odata/sap/ZHRMS_SRV/";
+                    //oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, true,"ac-shenft","sap123456");
+                    oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, true);
+                    oModel.setCountSupported(false);
+                    sap.ui.getCore().setModel(oModel);
+                    //menu setting test
+                    var menuModel = new sap.ui.model.json.JSONModel("./model/menu.json");
+                    sap.ui.getCore().setModel(menuModel, "menuCollection");
+                    
+                    // var bpmtaskServiceUrl = "http://" + bpm_url + ":50000/bpmodata/tasks.svc";
+                    // var bpmtaskModel = new sap.ui.model.odata.ODataModel(bpmtaskServiceUrl, true);
+                    // sap.ui.getCore().setModel(bpmtaskModel, "bpmtask");
+                    
+                    // var bpmtaskdataServiceUrl = "http://" + bpm_url + ":50000/bpmodata/taskdata.svc";
+                    // var bpmtaskdataModel = new sap.ui.model.odata.ODataModel(bpmtaskdataServiceUrl, true);
+                    // sap.ui.getCore().setModel(bpmtaskdataModel, "bpmtaskdata");
+                    
+            		// set i18n model
+            		var i18nModel = new sap.ui.model.resource.ResourceModel({
+            			bundleUrl : "./i18n/messageBundle.properties"
+            		});
+            		sap.ui.getCore().setModel(i18nModel, "i18n");
+            		
+            		// set device model 
+            		var deviceModel = new sap.ui.model.json.JSONModel({
+            			isPhone : jQuery.device.is.phone,
+            			isNoPhone : !jQuery.device.is.phone,
+            			listMode : (jQuery.device.is.phone) ? "None" : "SingleSelectMaster",
+            			listItemType : (jQuery.device.is.phone) ? "Active" : "Inactive"
+            		});
+            		deviceModel.setDefaultBindingMode("OneWay");
+            		sap.ui.getCore().setModel(deviceModel,"device");
+            		
+            		var launchpadPage = sap.ui.view({id:"idlaunchpad", viewName:"com.zhenergy.hr.view.launchpad", type:sap.ui.core.mvc.ViewType.XML  });
+					app.addPage(launchpadPage);
+					
+				
+					
+					myNewTeam= sap.ui.jsview("idmyNewTeam", "com.zhenergy.hr.view.myNewTeam.myNewTeam");
+				    app.addPage(myNewTeam);
+					
+        			idPersonalInfoSplitApp = sap.ui.jsview("idPersonalInfoSplitApp", "com.zhenergy.hr.view.personalinfo.PersonalInfoSplitApp");
+        		    app.addPage(idPersonalInfoSplitApp);
+        		    
+					app.placeAt("content");
+				}
+				
+				
+				//开启连线
+				function openStore() {
+            //         if (!haveAppId()) {
+            //             return;
+            //         }
+            //         //获取ldap/ad登录名，映射到sap中的PA0105，0001
+            //         usrid = appContext.registrationContext.user.toUpperCase();
+            //         pwd =appContext.registrationContext.password;
+            //         var qualification = "/EE_QUALIFICATION_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var profession = "/EE_PROFESSION_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var skill = "/EE_SKILL_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var specialist = "/EE_SPECIALIST_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var workexperience = "/EE_WORKEXPERIENCE_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var contract = "/EE_CONTRACT_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var address_set = "/EE_ADDRESS_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var communication_set = "/EE_COMMUNICATION_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var education_set = "/EE_EDUCATION_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var family_set = "/EE_FAMILY_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var indentity_set = "/EE_INDENTITY_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var party_set = "/EE_PARTY_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var info_set = "/EE_INFO_SET?$filter=Usrid eq '" + usrid + "'&sap-language=zh_CN";
+            //         var payslip = "/EE_PAYSLIP_HEADER_SET?$filter=Usrid eq '" + usrid + "'";
+            //         var photo = "/EE_PERSONPHOTO_SET('" + usrid + "')";
+                   
+            //         var properties = {
+            //             "name": "ProductsOfflineStore",
+            //             "host": appContext.registrationContext.serverHost,
+            //             "port": appContext.registrationContext.serverPort,
+            //             "https": appContext.registrationContext.https,
+            //             "serviceRoot" : appId,
+            //             "definingRequests" : {
+            //                 "AddressDR" : address_set,
+            //                 "CommunicationDR" : communication_set,
+        				// 	"EducationDR" : education_set,
+        				// 	"FamilyDR" : family_set,
+        				// 	"IndentityDR" : indentity_set,
+        				// 	"PartyDR" : party_set,
+        				// 	"InfoDR" : info_set,
+        				// 	"photo" : photo,
+        				// 	"contract" : contract,
+        				// 	"qualification" : qualification,
+        				// 	"profession" : profession,
+        				// 	"skill" : skill,
+        				// 	"specialist" : specialist,
+            //                 "payslip":payslip,
+            //                 "workexperience":workexperience,
+            //             }
+            //         };
+                    
+            //         store = sap.OData.createOfflineStore(properties);
+                    
+            //         //var options = {};
+            //         store.open(openStoreSuccessCallback, errorCallback/*, options*/);
+                }
+        
+                function openStoreSuccessCallback() {
+                    //sap.OData.applyHttpClient();  //Offline OData calls can now be made against datajs.
+                    setModel();
+                    busyDialog.close();
+                    refreshStore();
+                }
+                function refreshStore() {
+                	if (isDeviceOnline()) {                       
+                        store.refresh(refreshStoreCallback, errorCallback);
+                    }
+                }
+                function refreshStoreCallback() {
+                    //alert("success");
+                }
+                function isDeviceOnline() {
+                    return online;
+                }
+                document.addEventListener("online", deviceOnline, false);
+                document.addEventListener("offline", deviceOffline, false);
+                function deviceOnline() {
+                		online = true;
+                        sap.OData.removeHttpClient();
+                }
+                function deviceOffline() {
+                        online = false;
+                        sap.OData.applyHttpClient();
+                }
+                function errorCallback(e) {
+                    alert("An error occurred " + JSON.stringify(e));
+                }
+                
+                function haveAppId() {
+                    if (!appContext) {
+                        alert("Please register with the SMP Server before proceeding");
+                        return false;
+                    }
+                    return true;
+                }
+                
+                
+                //获取当前登录用户的USERID
+                var oModelUser= new sap.ui.model.json.JSONModel();
+                oModelUser.loadData("/sap/bc/ui2/start_up",null,false);
+			    usrid = oModelUser.oData.id;
+				startApp();
+		</script>
+	<style>
+            .graph{
+                width:190px;
+                margin: auto;
+                border:1px solid rgb(69, 130, 148);
+                height:15px;
+                border-radius:5px;
+            }
+        #bar{
+            display:block;
+            background-color:rgb(69, 130, 148);
+            float:left;
+            height:100%;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius:2px;
+        }
+        #status{
+            border-radius:5px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:rgba(0, 0, 0, 0.52);
+            z-index: 20000;
+        }
+        #statusDiv{
+            border-radius:5px;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px!important;
+            height: 75px!important;
+            z-index: 20001;
+            background-color:white;
+            margin-top: -37.5px;
+            margin-left:-100px;
+        }
+        #statusLabel{
+            text-align:center;
+            padding: 25px;
+        }
+        
+            </style>
+        <script src='http://localhost:1234/webide/plugins/pluginrepository/hybrid/cordovafacade/cordova.js' data-original-url='index.html'></script>
+<style>#interactive.viewport video{width:320px;height:240px;}
+#interactive.viewport .drawingBuffer{width:320px;height:240px;position:absolute;}</style></head>
+    <body class="sapUiBody" role="application">
+        <div id="content"></div>
+        <div id="status" style="display:none">
+            <div id="statusDiv">
+                <div id="statusLabel">有新的更新需要下载</div>
+                <div class='graph' style="display:none"><strong id='bar' style='width:"+percent+"%;'></strong></div>
+            </div>
+        </div>
+    </body>
+</html>

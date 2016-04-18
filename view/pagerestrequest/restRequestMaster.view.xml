@@ -1,0 +1,379 @@
+<mvc:View controllerName="com.zhenergy.hr.view.pagerestrequest.restRequestMaster" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page navButtonPress="back" showFooter="{device>/isPhone}" showNavButton="{device>/isPhone}" title="请假申请">
+		<content>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="姓名">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label id="name" text="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Ename}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="剩余年休假">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Kynj}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="剩余调休">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Kytx}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="部门">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label id="department" text="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/ZzbmbmTxt}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="岗位">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label id="post" text="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/PlansTxt}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="班组">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label id="team" text="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/ZzbzTxt}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="55px">
+				<items>
+					<VBox alignItems="Center" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="请假类型">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox alignItems="Start" direction="Column" height="42px" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Select id="restType" items="{restData>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EtLeaType/item}" placeholder="请选择">
+								<core:Item key="{restData>Subty}" text="{restData>Stext}"/>
+							</Select>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="55px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="申请日期">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="date" type="Date" value=""/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="55px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="开始时间">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="startTime" type="DateTime"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="55px">
+				<items>
+					<VBox direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="结束时间">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="endTime" type="DateTime"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="55px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="请假天数">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Input class="sapUiSmallMarginBottom" id="restdays"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" height="155px">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="申请原因" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea height="150px" id="reason" width="100%" wrapping="None">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" height="100px">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="备注" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea height="95px" id="remarks" width="100%" wrapping="None">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="End" justifyContent="Center">
+				<items>
+					<VBox direction="Column" width="100%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Button press="submit" text="确定" type="Emphasized" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Button>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+		</content>
+		<!--<headerContent>-->
+		<!--	<Button icon="sap-icon://save" width="60px"></Button>-->
+		<!--</headerContent>-->
+		<footer>
+			<Toolbar>
+				<content>
+					<Button icon="sap-icon://home" press="back"></Button>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

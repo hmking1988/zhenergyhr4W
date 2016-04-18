@@ -1,0 +1,173 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m" controllerName="com.zhenergy.hr.view.personalinfo.ContractDetail" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{ContractType}" backgroundDesign="Solid" showNavButton="{device>/isPhone}" navButtonPress="back" showFooter="{device>/isPhone}">
+		<content>
+		    <!--<f:SimpleForm-->
+      <!--  minWidth="1024"-->
+      <!--  maxContainerCols="2"-->
+      <!--  editable="false"-->
+      <!--  layout="ResponsiveGridLayout"-->
+      <!--  labelSpanL="3"-->
+      <!--  labelSpanM="3"-->
+      <!--  emptySpanL="4"-->
+      <!--  emptySpanM="4"-->
+      <!--  columnsL="1"-->
+      <!--  columnsM="1">-->
+      <!--  <f:content>-->
+      <!--  <HBox>-->
+      <!--      <VBox class="label_hbox" width="40%">-->
+      <!--      <Text text="合同签订日期" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="合同单位" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="兼职工作" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="竞争条款" width="100%" textAlign="Right" class="vbox_text"/>-->
+             
+      <!--      </VBox>-->
+      <!--      <VBox calss="text_hbox" width="60%">-->
+      <!--    <Text text="2014-12-22" class="vbox_text01"/>-->
+      <!--    <Text text="浙能台二" class="vbox_text01"/>-->
+      <!--    <Text text="否" class="vbox_text01"/>-->
+      <!--    <Text text="有" class="vbox_text01"/>-->
+         
+      <!--      </VBox>-->
+      <!--  </HBox>-->
+      <!--  <HBox>-->
+      <!--      <VBox class="label_hbox" width="40%">-->
+      <!--          <Text text="试用期" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      </VBox>-->
+      <!--      <VBox calss="text_hbox" width="60%">-->
+      <!--          <Text text="2014-12-31至2015-06-31" class="vbox_text01"/>-->
+      <!--      </VBox>-->
+      <!--  </HBox>-->
+      <!--  <HBox>-->
+      <!--      <VBox class="label_hbox" width="40%">-->
+      <!--      <Text text="合同期限类型" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="合同解除类型" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="合同解除日期" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="工作地点" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="工作任务终止约定" width="100%" textAlign="Right" class="vbox_text"/>-->
+      <!--      <Text text="签订性质" width="100%" textAlign="Right" class="vbox_text"/>-->
+             
+      <!--      </VBox>-->
+      <!--      <VBox calss="text_hbox" width="60%">-->
+      <!--    <Text text="无固定期限" class="vbox_text01"/>-->
+      <!--    <Text text="劳动者提出" class="vbox_text01"/>-->
+      <!--    <Text text="2015-03-31" class="vbox_text01"/>-->
+      <!--    <Text text="杭州" class="vbox_text01"/>-->
+      <!--    <Text text="是" class="vbox_text01"/>-->
+      <!--    <Text text="首签" class="vbox_text01"/>-->
+      <!--      </VBox>-->
+      <!--  </HBox>-->
+      <!--  </f:content>-->
+      <!--</f:SimpleForm>-->
+		   <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="合同签订日期" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{ContractSignDate}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="合同单位" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Company}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="兼职工作" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{PartTimeFlag}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="竞争条款" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{CompetitionFlag}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="试用期" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{TrailPeriod}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="合同期限类型" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{ContractPeriodType}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="合同解除类型" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{ContractPeriodType}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="合同解除日期" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{ContractPeriodType}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="工作地点" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Place}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="工作任务终止约定" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Place}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="签订性质" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{SignType}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+		</content>
+		<footer>
+		 	<Toolbar>
+                <content>
+                <!--<ToolbarSpacer/>-->
+                <Button id="botton" icon="sap-icon://home" press="back1"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</core:View>

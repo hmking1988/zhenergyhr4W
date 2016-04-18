@@ -1,0 +1,160 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m" controllerName="com.zhenergy.hr.view.personalinfo.OccupationDetail" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{QualificationName}" backgroundDesign="Solid" showNavButton="{device>/isPhone}" navButtonPress="back" showFooter="{device>/isPhone}">
+		<content>
+	        <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="证书编号" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{QualificationId}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="类型" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Type}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="职业资格等级" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{QualificationGrade}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="最高等级" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{HighestGradeFlag}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="取得时间" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{IssueDate}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="评审机构" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{ReviewInstitution}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="颁发机构" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{IssueInstitution}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="获得资格途径" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{ComeFrom}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="批准文件" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Document}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="聘任时间" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{HireDate}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="解聘时间" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{FireDate}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="聘任单位" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{HireCompany}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="备注" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Remark}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+		    <!--<Label text="证书编号:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="22334" width="70%"></Label>-->
+      <!--      <Label text="类型:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="职业资格" width="70%"></Label>-->
+      <!--      <Label text="职业资格等级:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="二级（技师）" width="70%"></Label>-->
+      <!--      <Label text="最高等级:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="是" width="70%"></Label>-->
+      <!--      <Label text="取得时间:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="2012-12-12" width="70%"></Label>-->
+      <!--      <Label text="评审机构:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="全国注册工程师管理委员会" width="70%"></Label>-->
+      <!--      <Label text="颁发机构:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="全国注册工程师管理委员会" width="70%"></Label>-->
+      <!--      <Label text="获得资格途径:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="评定" width="70%"></Label>-->
+      <!--      <Label text="批准文件:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="浙电人字[2004]15号" width="70%"></Label>-->
+      <!--      <Label text="聘任时间:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="2012-12-12" width="70%"></Label>-->
+      <!--      <Label text="解聘时间:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="2012-12-13" width="70%"></Label>-->
+      <!--      <Label text="聘任单位:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="浙能金华燃机发电有限责任公司" width="70%"></Label>-->
+      <!--      <Label text="备注:" textAlign="Right" width="30%"></Label>-->
+      <!--      <Label text="" width="70%"></Label>-->
+		</content>
+        <footer>
+            <Toolbar>
+                <content>
+                <!--<ToolbarSpacer/>-->
+                <Button icon="sap-icon://home" press="back1"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</core:View>

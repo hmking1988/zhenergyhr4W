@@ -1,0 +1,72 @@
+<core:View controllerName="com.zhenergy.hr.view.launchpad" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns="sap.m">
+	<u:Shell icon="" id="myShell">
+		<u:headItems>
+			<!--<u:ShellHeadItem-->
+			<!--  tooltip="Home"-->
+			<!--  icon="sap-icon://action-settings"-->
+			<!--  visible="true"-->
+			<!--  press="handlePressSetting"/>-->
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://action-settings" press="handleUserItemPressed" text="" tooltip="Logoff" visible="true"/>
+		</u:headEndItems>
+		<u:user>
+			<!--<u:ShellHeadUserItem image="{Uri}" press="handleUserItemPressed" showPopupIndicator="true" username="{Name}"></u:ShellHeadUserItem>-->
+		</u:user>
+		<u:search>
+			<Label></Label>
+			<!--      <HBox width="100%" justifyContent="End">-->
+			<!--                        <items>-->
+			<!--        <Label id="shellTitle" textAlign="End" text="欢迎，" class="shell-title"></Label>-->
+			<!--        <Label class="usernameTitle" text="张三"></Label>-->
+			<!--</items>-->
+			<!--        </HBox>-->
+		</u:search>
+		<TileContainer id="tc_menu1">
+			<!--<CustomTile>-->
+			<!--    <Image src="img/sapicon.png"></Image> -->
+			<!--</CustomTile>-->
+			<!--<StandardTile icon="sap-icon://general-leave-request" info="" infoState="None" number="" numberUnit="处理中" press="handleNavOnSelect" title="休假申请">-->
+			<!--	<customData>-->
+			<!--		<core:CustomData key="targetPage" value="idrestRequestSplitApp"></core:CustomData>-->
+			<!--	</customData>-->
+			<!--</StandardTile>-->
+			<StandardTile icon="sap-icon://monitor-payments" info="" infoState="None" number="" numberUnit="处理中" press="handleNavOnSelect" title="薪资查询">
+				<customData>
+					<core:CustomData key="targetPage" value="pageConsultantTask"></core:CustomData>
+				</customData>
+			</StandardTile>
+			<StandardTile icon="sap-icon://employee" info="" infoState="None" number="" numberUnit="处理中" press="handleNavOnSelect" title="个人信息">
+				<customData>
+					<core:CustomData key="targetPage" value="idPersonalInfoSplitApp"></core:CustomData>
+				</customData>
+			</StandardTile>
+			<!--<StandardTile icon="sap-icon://accept" info="" infoState="None" number="" numberUnit="处理中" press="handleNavOnSelect" title="请假审批">-->
+			<!--	<customData>-->
+			<!--		<core:CustomData key="targetPage" value="idleaveApprovalSplitApp"></core:CustomData>-->
+			<!--	</customData>-->
+			<!--</StandardTile>-->
+			<StandardTile icon="sap-icon://group" id="myTeam" info="" infoState="None" number="" numberUnit="处理中" press="handleNavOnSelect" title="我的团队">
+				<customData>
+					<core:CustomData key="targetPage" value="idmyNewTeam"></core:CustomData>
+				</customData>
+			</StandardTile>
+		</TileContainer>
+		<!--     <TileContainer id="tc_menu" tiles="{menuCollection>/Menu}">-->
+		<!--		<StandardTile -->
+		<!--			icon="{menuCollection>icon}" -->
+		<!--			title="{menuCollection>title}" -->
+		<!--			info="{menuCollection>info}"-->
+		<!--			infoState="{menuCollection>infoState}"-->
+		<!--			number="{menuCollection>number}"-->
+		<!--			numberUnit="{menuCollection>numberUnit}"-->
+		<!--			press="handleNavOnSelect">-->
+		<!--				<customData>-->
+		<!--					<core:CustomData key="targetPage" value="{menuCollection>targetPage}">-->
+		<!--					</core:CustomData>-->
+		<!--				</customData>-->
+		<!--		</StandardTile>-->
+		<!--</TileContainer>-->
+	</u:Shell>
+</core:View>

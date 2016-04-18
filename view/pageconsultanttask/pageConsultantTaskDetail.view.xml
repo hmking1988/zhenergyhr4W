@@ -1,0 +1,28 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.pageconsultanttask.pageConsultantTaskDetail"
+	xmlns:sap.ui.core.mvc="sap.ui.core.mvc" xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m">
+	<Page id="paydepageid" navButtonPress="handleNavButtonPress" showFooter="{device&gt;/isPhone}" showNavButton="{device&gt;/isPhone}" title="工资单详情">
+		<content>
+			<List busy="false" class="listclass" id="aa" mode="{device&gt;/listMode}">
+				<StandardListItem busy="false" busyIndicatorDelay="1000" counter="0" description="{Amount}" title="{Wagetxt}" type="Inactive"/>
+			</List>
+		</content>
+		<footer>
+			<Bar>
+				<customData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+				</customData>
+				<contentLeft>
+					<Button icon="sap-icon://home" press="handlePressHome"/>
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+</sap.ui.core.mvc:View>

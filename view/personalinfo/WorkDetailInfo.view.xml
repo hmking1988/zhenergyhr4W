@@ -1,0 +1,127 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.personalinfo.WorkDetailInfo"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="{Company}" backgroundDesign="Solid" showNavButton="{device>/isPhone}" navButtonPress="back" showFooter="{device>/isPhone}">
+        <content>
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="城市" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{City}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="行业" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Industry}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="部门" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Department}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="岗位" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Position}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="岗位分类" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{PostionSeq}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="证明人" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Voucher}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <!--<HBox width="100%">-->
+            <!--<VBox width="40%" direction="Column" >-->
+            <!--   <Text class="text" text="工作年限" width="100%" textAlign="Right"/>-->
+            <!--</VBox>-->
+            <!--<VBox width="60%" >-->
+            <!--    <Text text="{}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>-->
+            <!--</VBox>-->
+            <!--</HBox>-->
+            
+            <!--<HBox width="100%">-->
+            <!--<VBox width="40%" direction="Column" >-->
+            <!--   <Text class="text" text="工作性质" width="100%" textAlign="Right"/>-->
+            <!--</VBox>-->
+            <!--<VBox width="60%" >-->
+            <!--    <Text text="{}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>-->
+            <!--</VBox>-->
+            <!--</HBox>-->
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="是否运行" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{OperationFlag}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="备注" width="100%" textAlign="Right"/>
+            </VBox>
+            <VBox width="60%" >
+                <Text text="{Remarks}" maxLines="0" textAlign="Left" class="vbox_text02"></Text>
+            </VBox>
+            </HBox>
+            
+            <!--<Label text="城市:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="上海" width="70%"></Label>-->
+            <!--<Label text="行业:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="交通运输、仓储和邮政业" width="70%"></Label>-->
+            <!--<Label text="部门:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="销售部" width="70%"></Label>-->
+            <!--<Label text="岗位:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="经理" width="70%"></Label>-->
+            <!--<Label text="岗位分类:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="管理岗位、决策管理岗位" width="70%"></Label>-->
+            <!--<Label text="证明人:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="张三" width="70%"></Label>-->
+            <!--<Label text="工作年限:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="5年" width="70%"></Label>-->
+            <!--<Label text="工作性质:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="借调" width="70%"></Label>-->
+            <!--<Label text="是否运行:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="" width="70%"></Label>-->
+            <!--<Label text="备注:" textAlign="Right" width="30%"></Label>-->
+            <!--<Label text="" width="70%"></Label>-->
+        </content>
+        <footer>
+            <Toolbar>
+                <content>
+                <!--<ToolbarSpacer/>-->
+                <Button icon="sap-icon://home" press="back1"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</sap.ui.core.mvc:View>

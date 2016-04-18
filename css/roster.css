@@ -1,0 +1,107 @@
+/*pdf*/
+#idrosterSplitApp #idrosterDownload01 #content01{
+    width: 100%;
+    height: 90%;
+}
+#rosterDownload01_head{
+    background:url(../img/head.bmp);
+    background-size:cover;
+    width:100%;
+    height:10%;
+}
+/*myTeamHtml*/
+        h2,h3,span,img{
+			margin:0px;
+			padding: 0px;
+		}
+		.box_img{
+			width: 60px;
+            height: 59px;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+		}
+		.box{
+			border: 1px solid #ccc;
+            position: relative;
+            width: 100%;
+            height: 70px;
+            background: white;
+		}
+		.head{
+		    font-size: 19px;
+            margin: 5px;
+		}
+		.name{
+		    margin:5px;
+		}
+		.position{
+		    margin:5px;
+		}
+		.head_h2{
+		        font-family: \5FAE\8F6F\96C5\9ED1;
+                font-size: 1rem;
+                font-weight: normal;
+                color: #666666;
+                text-align: center;
+                display:block;
+                line-height:40px;
+		}
+		.header{
+		    background:white;
+		    position:fixed;
+		    width:100%;
+		    height:40px;
+		}
+		#myNewTeamBack{
+		    position:absolute;
+		}
+		.arrow{
+		    position:relative;
+		}
+		.arrow_img{
+		    width:20px;
+		    height:20px;
+		    display:block;
+		    margin:0 auto;
+		}
+		.content{
+		    width:100%;
+		    position:absolute;
+		    top:40px;
+		    left:0px;
+		}
+		.headerBtn > .sapMBtnInner {
+		    width:25px;
+		    height:25px;
+		    background:url("../img/arrowleft.png");
+		    background-size:cover;
+		    position:absolute;
+		    top:8px;
+		    left:8px;
+		    border:0px;
+		}
+		.headerBtn:hover>.sapMBtnHoverable{
+		    background:url("../img/arrowleft.png");
+		    background-size:cover;
+		}
+		.sapMBtnInner{
+		    min-width:20px;
+		}
+		
+/*myTeamXml*/
+    .sapMListHdr{
+        font-family:微软雅黑;
+    }
+    .myTeamText{
+        margin-top:4px;
+        margin-left:30px;
+        margin-bottom:4px;
+    }
+    .myNewTeamImage{
+        display:block;
+        margin:8px auto 0 auto;
+    }
+    .listclass{
+        margin-bottom:5px;
+    }

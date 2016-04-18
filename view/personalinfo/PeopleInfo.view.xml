@@ -1,0 +1,21 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.personalinfo.PeopleInfo"
+    xmlns="sap.m"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="个人资料" showNavButton="true"  navButtonPress="back" >
+        <content>
+            <StandardListItem type="Navigation" counter="0" title="联系信息"  press="handlepeopledetailListItemPress"></StandardListItem>
+            <StandardListItem type="Navigation" counter="0" title="地址信息"  press="handlepeopleaddrListItemPress"></StandardListItem>
+            <StandardListItem type="Navigation" counter="0" title="个人数据"  press="handlepeopledataListItemPress"></StandardListItem>
+            <StandardListItem type="Navigation" counter="0" title="身份证"  press="handlepeopleidListItemPress"></StandardListItem>
+            <StandardListItem type="Navigation" counter="0" title="政党信息"  press="handlepeoplepartyListItemPress"></StandardListItem>
+        </content>
+        <footer>
+            <Toolbar>
+                <content>
+                <!--<ToolbarSpacer/>-->
+                <Button icon="sap-icon://home" press="back1"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</sap.ui.core.mvc:View>

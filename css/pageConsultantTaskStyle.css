@@ -1,0 +1,248 @@
+.sapUiBody {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+.sapMIBar-CTX.sapMPageHeader .sapMLabel {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+.sapMInputBaseInner {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+#idpageConsultantTaskDetail .sapMHBox {
+    background-color: white;
+    border-bottom: #D6D5D9 solid 1px;
+}
+#idpageConsultantTaskDetail .sapMVBox .sapMLabel {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#idpageConsultantTaskDetail .sapMVBox {
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+#idpageConsultantTaskDetail>.sapMPage>section>.sapMPageScroll>.sapMHBox {
+    border-bottom: black solid 2px;
+}
+#idpageConsultantTaskDetail>.sapMPage>section>.sapMPageScroll>.sapMHBox>.sapMVBox {
+    padding: 0px;
+}
+#idpageConsultantTaskDetail>.sapMPage>section>.sapMPageScroll>.sapMHBox>.sapMVBox>.sapMHBox:last-child {
+    border: 0px;
+}
+#idpageConsultantTaskDetail>.sapMPage>section>.sapMPageScroll>.sapMHBox>.sapMVBox>.sapMHBox:first-child label {
+    font-weight: bold;
+}
+/*
+#idpageConsultantTaskDetail #__hbox4,#idpageConsultantTaskDetail #__hbox8,#idpageConsultantTaskDetail #__hbox0{
+    border-bottom: black solid 2px;
+}
+#idpageConsultantTaskDetail #__hbox4>.sapMVBox,#idpageConsultantTaskDetail #__hbox8>.sapMVBox,#idpageConsultantTaskDetail #__hbox12>.sapMVBox{
+    padding:0px;
+}
+#idpageConsultantTaskDetail #__hbox4>.sapMVBox>.sapMHBox:last-child,#idpageConsultantTaskDetail #__hbox8>.sapMVBox>.sapMHBox:last-child,#idpageConsultantTaskDetail #__hbox12>.sapMVBox>.sapMHBox:last-child{
+    border:0px;
+}
+#idpageConsultantTaskDetail #__hbox4>.sapMVBox>.sapMHBox:first-child label,#idpageConsultantTaskDetail #__hbox8>.sapMVBox>.sapMHBox:first-child label,#idpageConsultantTaskDetail #__hbox12>.sapMVBox>.sapMHBox:first-child label{
+    font-weight:bold;
+}
+*/
+
+#idleaveApprovalMaster .sapMListHdr {
+    font-weight: bold;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    font-size: 14px;
+    height: inherit;
+    line-height: inherit;
+    padding: 0px;
+    padding-left: 0.5rem;
+}
+#idleaveApprovalMaster .sapMVBox {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#idleaveApprovalMaster .sapMVBox>div>label {
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#idleaveApprovalMaster .sapMVBox>div>div {
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#idleaveApprovalMaster .sapMVBox .sapMObjectAttributeDiv .sapMTextMaxLine {
+    color: red;
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#idleaveApprovalMaster .sapMVBox .sapMFlexItem:first-child .sapMObjectAttributeDiv .sapMTextMaxLine {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+#idSafeNoDetail .sapMHBox {
+    background-color: white;
+    height: 48px;
+    margin: 1rem auto;
+}
+#idSafeNoDetail .sapMHBox>.sapMFlexItem:first-child {
+    border-right: 1px solid #D6D5D9;
+    text-align: center;
+    line-height: 48px;
+    width: 48px;
+}
+#idSafeNoDetail .sapMHBox>.sapMFlexItem:last-child>.sapMInput>input {
+    border: 0px;
+    font-size: 20px;
+}
+#idrestRequestMaster .sapMHBox:last-child,
+#idapprovalcontent .sapMHBox:last-child {
+    /* position: absolute;
+  bottom: 30px;
+  width: 100%;*/
+    padding-top: 30px;
+}
+#idrestRequestMaster .sapMHBox,
+#idapprovalcontent .sapMHBox,
+#idrosterDetail section>.sapMHBox,
+#idleaveApprovalDetail .sapMHBox {
+    /* position: absolute;
+  bottom: 30px;
+  width: 100%;*/
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#idapprovalcontent .sapMHBox {
+    padding-top: 10px;
+}
+#idapprovalcontent label {
+    padding-top: 3px;
+}
+#idrestRequestMaster .sapMHBox .sapMVBox:first-child label {
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+#idSuggestionDetail .SugText {
+    padding: 10px 10px;
+}
+#idSuggestionDetail .SugText textarea {
+    border-radius: 10px;
+}
+#idlaunchpad label {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+#idlaunchpad .sapUiUfdShellHeadCenter .sapMHBox label {
+    padding-top: 4px;
+    font-weight: bold;
+}
+#idlaunchpad .sapUiUfdShellHeadCenter .sapMHBox .usernameTitle {
+    padding-right: 5px;
+    color: blue;
+}
+#idlaunchpad .sapUiUfdShellHeadCenter .sapMHBox img {
+    padding-top: 4px;
+}
+#idlaunchpad .sapUiUfdSpltContCntnt {
+    FILTER: progid: DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr=#2DABB3, endColorStr=#1A4D80);
+    /*IE 6 7 8*/
+    background: -ms-linear-gradient(top, #2DABB3, #1A4D80);
+    /* IE 10 */
+    background: -moz-linear-gradient(top, #2DABB3, #1A4D80);
+    /*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2DABB3), to(#1A4D80));
+    /*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2DABB3), to(#1A4D80));
+    /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #2DABB3, #1A4D80);
+    /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #2DABB3, #1A4D80);
+    /*Opera 11.10+*/
+}
+#idlaunchpad .sapMTile {
+    border-radius: 5px;
+}
+#idlogout .sapMSLIDescription {
+    word-break: break-all;
+    white-space: normal;
+}
+#idlogout .sapMSLITitleOnly {
+    font-size: 1rem;
+}
+/*手机端自定义css
+#idlaunchpad .sapMStdTileTopRow{
+    height: 3rem;
+    margin-top: 0px;
+    position: absolute;
+    top: 4.8rem;
+}
+#idlaunchpad .sapMStdTileBottomRow{
+    height: 3rem;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 10px;
+}
+
+#idlaunchpad .sapMTileContent{
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+#idlaunchpad .sapMTileContent .sapMStdTileTopRow{
+    padding-right:0rem;
+}
+#idlaunchpad .sapMTileContent .sapMStdTileTopRow .sapMStdTileIconDiv{
+    padding-top:0.3rem;
+}
+#idlaunchpad .sapMTileContent .sapMStdTileTopRow .sapMStdTileIconDiv span{
+    width: 2rem !important;
+    height: 2rem !important;
+    line-height: 2rem !important;
+    font-size: 2rem !important;
+}
+#idlaunchpad .sapMTileContent .sapMStdTileTopRow .sapMStdTileNumDiv{
+    padding-left:2.6rem;
+    display: block;
+  float: initial;
+}
+
+#idlaunchpad .sapMTile,#idlaunchpad .sapMTileContent{
+    width:9rem;
+    height:9rem;
+}
+#idlaunchpad .sapMStdTileBottomRow .sapMStdTileTitle{
+    font-size:1rem;
+}
+*/
+
+/*icon size*/
+
+.size1 {
+    font-size: 1.5rem;
+}
+.size2 {
+    font-size: 2rem;
+}
+.size3 {
+    font-size: 5rem;
+}
+.size4 {
+    font-size: 7.5rem;
+}
+.size5 {
+    font-size: 10rem;
+}
+@media (max-width: 599px) {
+    .size1 {
+        font-size: 1rem;
+    }
+    .size2 {
+        font-size: 1.5rem;
+    }
+    .size3 {
+        font-size: 3rem;
+    }
+    .size4 {
+        font-size: 4rem;
+    }
+    .size5 {
+        font-size: 5rem;
+    }
+}

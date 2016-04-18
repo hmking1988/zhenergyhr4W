@@ -1,0 +1,27 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.personalinfo.EducationInfo"
+    xmlns="sap.m"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="教育" showNavButton="true" navButtonPress="back" >
+        <headerContent>
+			<Button icon="sap-icon://add" press="download" />
+		</headerContent>
+        <content>
+        <List
+		    class="listclass"
+			id="list"
+			mode="{device>/listMode}"
+			select="handleeducationdetailListItemSelect"
+			>
+			<StandardListItem type="Navigation" counter="0" title="{EducationType}" press="handleeducationdetailListItemPress"></StandardListItem>
+		</List>
+        </content>
+        <footer>
+            <Toolbar>
+                <content>
+                <!--<ToolbarSpacer/>-->
+                <Button icon="sap-icon://home" press="back1"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</sap.ui.core.mvc:View>

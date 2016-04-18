@@ -1,0 +1,29 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.personalinfo.WorkInfo"
+    xmlns="sap.m"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <Page title="工作经历" showNavButton="true" navButtonPress="back" showFooter="{device>/isNoPhone}">
+        <content>
+            <List
+		    class="listclass"
+			id="list"
+			mode="{device>/listMode}"
+			select="handleworkdetailListItemSelect"
+			>
+			    <StandardListItem type="Navigation" counter="0" title="{Company}" press="handleworkdetailListItemPress"></StandardListItem>
+	    	</List>
+            <!--<StandardListItem type="Navigation" counter="0" title="浪潮ERP" press="handleworkdetailListItemPress"></StandardListItem>-->
+            <!--<StandardListItem type="Navigation" counter="0" title="海潮ERP" press="handleworkdetailListItemPress"></StandardListItem>-->
+            <!--<StandardListItem type="Navigation" counter="0" title="湖潮ERP" press="handleworkdetailListItemPress"></StandardListItem>-->
+            <!--<StandardListItem type="Navigation" counter="0" title="河潮ERP" press="handleworkdetailListItemPress"></StandardListItem>-->
+            <!--<StandardListItem type="Navigation" counter="0" title="盒潮ERP" press="handleworkdetailListItemPress"></StandardListItem>-->
+        </content>
+          <footer>
+            <Toolbar>
+                <content>
+                <!--<ToolbarSpacer/>-->
+                <Button icon="sap-icon://home" press="back1"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</sap.ui.core.mvc:View>

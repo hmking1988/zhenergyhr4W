@@ -1,0 +1,515 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.roster.rosterDetail" xmlns:sap.ui.core.mvc="sap.ui.core.mvc"
+	xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m">
+	<Page id="rosterrenyuanxinxi" navButtonPress="back" showNavButton="true" title="人员信息">
+		<content>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" id="roster_person_headlike" justifyContent="Center" width="50%">
+						<Image height="140px" src="{Uri}" width="100px"></Image>
+					</VBox>
+					<VBox direction="Column" width="50%">
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="工号">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{Zzgsbh}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="姓名">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{Name}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="性别">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{Gender}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="出生日期">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{path:'Birthdt', formatter:'.dateFormatter'}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="民族">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{Nation}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="籍贯">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{Zzgj}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+						<HBox height="20px">
+							<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="健康状况">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+							<VBox direction="Column" width="60%">
+								<layoutData>
+									<FlexItemData alignSelf="Center"></FlexItemData>
+								</layoutData>
+								<items>
+									<Label text="{Health}">
+										<layoutData>
+											<FlexItemData alignSelf="Auto"></FlexItemData>
+										</layoutData>
+									</Label>
+								</items>
+							</VBox>
+						</HBox>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="政治面貌">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{Politic}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="加入时间">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{path:'PoliticFr', formatter:'.dateFormatter'}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="参加工作时间">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{path:'Jobtm', formatter:'.dateFormatter'}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="进入本单位时间">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{path:'Cjobtm', formatter:'.dateFormatter'}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="专业技术资格">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{Technic}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="专业技术获得时间">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{path:'TechnicFr', formatter:'.dateFormatter'}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="最高学历（学位）">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{Degree}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="毕业院校及专业">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{SchMajor}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="就业学历（学位）">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{JobDegree}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="毕业院校及专业">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{JobSchMajor}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="20px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="现任职务（岗位）">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="60%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Label text="{Jobds}">
+								<layoutData>
+									<FlexItemData alignSelf="Auto"></FlexItemData>
+								</layoutData>
+							</Label>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<List busy="false" class="listclass" id="jianli" mode="{device>/listMode}"></List>
+			<List busy="false" class="listclass" id="jiating" mode="{device>/listMode}"></List>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<Button icon="sap-icon://home" press="back"></Button>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</sap.ui.core.mvc:View>

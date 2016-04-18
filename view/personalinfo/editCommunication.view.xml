@@ -1,0 +1,55 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="com.zhenergy.hr.view.personalinfo.editCommunication"  
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="更改" showNavButton="true" navButtonPress="back">
+        <content>
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="子类型描述" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+                <Text id='ziLeiXing' class="text" text="{Name}" width="100%" textAlign="Center"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text  class="text" text="*描述" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input id="miaoshu" value="{Value}" />
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text  class="text" text="*开始日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+                <DatePicker id="kaiShiRiQi" value="{Begda}" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*结束日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+                <DatePicker id="JieShuRiQi" value="{Endda}" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+        </content>
+        <footer>
+		 	<Toolbar>
+                <content>
+                    <Button text="保存" type="Emphasized" press="onSave" />
+                    <ToolbarSpacer/>
+                    <Button text="删除" type="Emphasized" press="ondelete" class="button_style" />
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</core:View>

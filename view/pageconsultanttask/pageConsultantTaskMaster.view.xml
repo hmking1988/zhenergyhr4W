@@ -1,0 +1,66 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.pageconsultanttask.pageConsultantTaskMaster"
+	xmlns:sap.ui.core.mvc="sap.ui.core.mvc" xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m">
+	<Page navButtonPress="back" showNavButton="true" title="薪资查询">
+		<content>
+			<Label width="100%"></Label>
+			<HBox height="55px">
+				<items>
+					<VBox direction="Column" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<DatePicker id="searchstart" placeholder="起始时间" valueFormat="yyyyMM" displayFormat="yyyy-MM"></DatePicker>
+            <!--<DateTimeInput class="sapUiSmallMarginBottom" id="searchstart" placeholder="起始时间" type="Date" displayFormat="yyyy-MM" valueFormat="yyyyMM"/>-->
+						</items>
+					</VBox>
+					<VBox direction="Column" width="40%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+						<DatePicker id="searchend" placeholder="结束时间" valueFormat="yyyyMM" displayFormat="yyyy-MM"></DatePicker>
+							<!--<DateTimeInput class="sapUiSmallMarginBottom" id="searchend" placeholder="结束时间" type="Date" displayFormat="yyyy-MM" valueFormat="yyyyMM"/>-->
+						</items>
+					</VBox>
+					<VBox direction="Column" width="20%">
+					    <Button text="查询" width="100%" press="searchtap"></Button>
+					</VBox>
+				</items>
+			</HBox>
+			<List id="test" items="{/EE_PAYSLIP_HEADER_SET}" mode="{device>/listMode}" noDataText="无数据" select="handleListSelect">
+				<customData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+				</customData>
+				<items>
+					<ObjectListItem counter="0" markFavorite="false" markFlagged="false" number="{Netpay}" numberUnit="RMB" press="handleListSelect"
+						showMarkers="false" title="{path:'Paydate', formatter:'.myglobalFormatter'}" type="Navigation">
+						<attributes>
+							<ObjectAttribute text="{Paytypetxt}"></ObjectAttribute>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<customData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+				</customData>
+				<content>
+					<Button icon="sap-icon://home" press="handlePressHome"></Button>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</sap.ui.core.mvc:View>

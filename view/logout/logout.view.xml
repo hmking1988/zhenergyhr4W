@@ -1,0 +1,18 @@
+<core:View controllerName="com.zhenergy.hr.view.logout.logout" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page navButtonPress="back" showNavButton="true" title="设置">
+		<content>
+			<Label/>
+			<List busy="false" id="appInfolist" mode="{device>/listMode}">
+				<StandardListItem description="1.1.1" title="版本号"/>
+				<StandardListItem description="2016年1月13日" title="更新日期"/>
+
+			</List>
+			<Label/>
+			<List busy="false" id="btnlist" mode="{device>/listMode}">
+				<!--<StandardListItem press="sublog" title="提交日志" type="Active"/>-->
+				<StandardListItem press="logout" title="退出登录" type="Active"/>
+			</List>
+		</content>
+	</Page>
+</core:View>

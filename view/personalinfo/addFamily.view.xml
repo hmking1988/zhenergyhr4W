@@ -1,0 +1,207 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.zhenergy.hr.view.personalinfo.addFamily" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="新增家庭成员" showNavButton="true" navButtonPress="back">
+		<content>
+		
+		    <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*家庭关系" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <ComboBox selectedKey="{newFamily>/Detail/Subty}" id="jiaTingGuanXiCreate">
+                    <items>
+                        <core:ListItem text="妻子" key="11"></core:ListItem>
+                        <core:ListItem text="丈夫" key="12"></core:ListItem>
+                        <core:ListItem text="儿子" key="13"></core:ListItem>
+                        <core:ListItem text="女儿" key="14"></core:ListItem>
+                        <core:ListItem text="父亲" key="15"></core:ListItem>
+                        <core:ListItem text="母亲" key="16"></core:ListItem>
+                        <core:ListItem text="岳父" key="17"></core:ListItem>
+                        <core:ListItem text="岳母" key="18"></core:ListItem>
+                        <core:ListItem text="兄弟" key="19"></core:ListItem>
+                        <core:ListItem text="姐妹" key="20"></core:ListItem>
+                        <core:ListItem text="其他" key="21"></core:ListItem>
+                        <core:ListItem text="紧急联络人" key="22"></core:ListItem>
+                    </items>
+                </ComboBox>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="姓名" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/Name}" id="xingMingCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="性别" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <RadioButtonGroup selectedIndex="{newFamily>/Detail/xingBie}" id="xingBieCreate">
+    				<buttons>
+    					<RadioButton text="男" key="0"/>
+    					<RadioButton text="女" key="1"/>
+    				</buttons>
+    			</RadioButtonGroup>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*出生日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <DatePicker value="{newFamily>/Detail/ChuShengRiQi}" id="chuShengRiQiCreate" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="电话号码" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/Telphone}" id="dianHuaHaoMaCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="详细地址" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/detailAddress}" id="detailAddressCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="邮政编码" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/PostCode}" id="youZhengBianMaCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="状态" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <ComboBox selectedKey="{newFamily>/Detail/zhuangTai}" id="zhuangTaiCreate">
+                    <items>
+                        <core:ListItem text="在职" key="01"></core:ListItem>
+                        <core:ListItem text="离职" key="02"></core:ListItem>
+                        <core:ListItem text="退休" key="03"></core:ListItem>
+                        <core:ListItem text="兼职" key="04"></core:ListItem>
+                        <core:ListItem text="解聘" key="05"></core:ListItem>
+                        <core:ListItem text="无工作" key="06"></core:ListItem>
+                        <core:ListItem text="年幼" key="07"></core:ListItem>
+                        <core:ListItem text="就读" key="08"></core:ListItem>
+                    </items>
+                </ComboBox>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="政治面貌" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <ComboBox selectedKey="{newFamily>/Detail/zhengZhiMianMao}" id="zhengZhiMianMaoCreate">
+                                    <items>
+                                        <core:ListItem text="中国共产党党员" key="01"></core:ListItem>
+                                        <core:ListItem text="中国共产党预备党员" key="02"></core:ListItem>
+                                        <core:ListItem text="中国共产主义青年团团员" key="03"></core:ListItem>
+                                        <core:ListItem text="成员/中国国民党革命委员会" key="04"></core:ListItem>
+                                        <core:ListItem text="中国民主同盟盟员" key="05"></core:ListItem>
+                                        <core:ListItem text="成员/中国民主建国会" key="06"></core:ListItem>
+                                        <core:ListItem text="成员/中国民主促进会" key="07"></core:ListItem>
+                                        <core:ListItem text="党员/中国农工民主党" key="08"></core:ListItem>
+                                        <core:ListItem text="中国致公党党员" key="09"></core:ListItem>
+                                        <core:ListItem text="九三学社社员" key="10"></core:ListItem>
+                                        <core:ListItem text="台湾民主自治同盟盟员" key="11"></core:ListItem>
+                                        <core:ListItem text="无党派民主人士" key="12"></core:ListItem>
+                                        <core:ListItem text="群众" key="13"></core:ListItem>
+                                        <core:ListItem text="其他" key="99"></core:ListItem>
+                                    </items>
+                                </ComboBox>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*工作单位" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/danWei}" id="gongZuoDanWeiCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="职务" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/zhiWu}" id="zhiWuCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="学历" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newFamily>/Detail/xueLi}" id="xueLiCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*开始日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <DatePicker value="{newFamily>/Detail/Begda}" id="kaiShiRiQiCreate" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*结束日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <DatePicker value="{newFamily>/Detail/Endda}" id="jieShuRiQiCreate" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="港澳台侨属标识" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <RadioButtonGroup selectedIndex="{newFamily>/Detail/biaoZhi}" id="biaoZhiCreate">
+    				<buttons>
+    					<RadioButton text="否" key="0"/>
+    					<RadioButton text="是" key="1"/>
+    				</buttons>
+    			</RadioButtonGroup>
+            </VBox>
+            </HBox>
+            
+		</content>
+		<footer>
+		 	<Toolbar>
+                <content>
+                    <Button text="保存" type="Emphasized" press="onSave" />
+                    <!--<ToolbarSpacer/>-->
+                    <!--<Button text="取消" type="Emphasized" press="onCancel" class="button_style" />-->
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</core:View>

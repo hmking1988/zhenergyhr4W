@@ -1,0 +1,67 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="com.zhenergy.hr.view.personalinfo.addCommunication" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="新增" showNavButton="true" navButtonPress="back">
+        <content>
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*子类型描述" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+                <ComboBox selectedKey="{newCommucation>/Detail/Name}" id="ziLeiXingCreate">
+                    <items>
+                        <core:ListItem text="办公电话" key="0002"></core:ListItem>
+                        <core:ListItem text="微波号" key="0003"></core:ListItem>
+                        <core:ListItem text="移动电话（主）" key="0004"></core:ListItem>
+                        <core:ListItem text="移动电话（副）" key="0005"></core:ListItem>
+                        <core:ListItem text="集团虚拟网" key="0006"></core:ListItem>
+                        <core:ListItem text="单位虚拟网" key="0007"></core:ListItem>
+                        <core:ListItem text="传真" key="0008"></core:ListItem>
+                        <core:ListItem text="电子邮件" key="0009"></core:ListItem>
+                        <core:ListItem text="移动平台（微信号）" key="0010"></core:ListItem>
+                    </items>
+                </ComboBox>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*描述" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input id="miaoshuCreate" value="{newCommucation>/Detail/Value}" />
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*开始日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+                <DatePicker id="kaiShiRiQiCreate" value="{newCommucation>/Detail/Begda}" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*结束日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+                <DatePicker id="jieShuRiQiCreate" value="{newCommucation>/Detail/Endda}" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+        </content>
+        <footer>
+		 	<Toolbar>
+                <content>
+                    <Button text="保存" type="Emphasized" press="onSave" />
+                    <!--<ToolbarSpacer/>-->
+                    <!--<Button text="取消" type="Emphasized" press="onCancel" class="button_style" />-->
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</core:View>

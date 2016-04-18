@@ -1,0 +1,161 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="com.zhenergy.hr.view.personalinfo.addAddress" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="新增地址信息" showNavButton="true" navButtonPress="back">
+		<content>
+		
+		    <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*居住类型" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <ComboBox selectedKey="{newAddress>/Detail/Subty}" id="juZhuLeiXingCreate">
+                    <items>
+                        <core:ListItem text="长期居住" key="1"></core:ListItem>
+                        <core:ListItem text="临时居住" key="2"></core:ListItem>
+                        <core:ListItem text="家庭地址" key="3"></core:ListItem>
+                        <core:ListItem text="紧急联系地址" key="4"></core:ListItem>
+                        <core:ListItem text="户口所在地" key="5"></core:ListItem>
+                        <core:ListItem text="办公地址" key="6"></core:ListItem>
+                    </items>
+                </ComboBox>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="邮政编码" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input editable="false" value="{newAddress>/Detail/PostalCode}" id="youZhengBianMaCteate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="省份" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <ComboBox selectedKey="{newAddress>/Detail/Sheng}" id="shengFenCreate">
+                                        <items>
+                                            <core:ListItem text="北京" key="010"></core:ListItem>
+                                            <core:ListItem text="上海" key="020"></core:ListItem>
+                                            <core:ListItem text="天津" key="030"></core:ListItem>
+                                            <core:ListItem text="内蒙古" key="040"></core:ListItem>
+                                            <core:ListItem text="山西" key="050"></core:ListItem>
+                                            <core:ListItem text="河北" key="060"></core:ListItem>
+                                            <core:ListItem text="辽宁" key="070"></core:ListItem>
+                                            <core:ListItem text="吉林" key="080"></core:ListItem>
+                                            <core:ListItem text="黑龙江" key="090"></core:ListItem>
+                                            <core:ListItem text="江苏" key="100"></core:ListItem>
+                                            <core:ListItem text="安徽" key="110"></core:ListItem>
+                                            <core:ListItem text="山东" key="120"></core:ListItem>
+                                            <core:ListItem text="浙江" key="130"></core:ListItem>
+                                            <core:ListItem text="江西" key="140"></core:ListItem>
+                                            <core:ListItem text="福建" key="150"></core:ListItem>
+                                            <core:ListItem text="湖南" key="160"></core:ListItem>
+                                            <core:ListItem text="湖北" key="170"></core:ListItem>
+                                            <core:ListItem text="河南" key="180"></core:ListItem>
+                                            <core:ListItem text="广东" key="190"></core:ListItem>
+                                            <core:ListItem text="海南" key="200"></core:ListItem>
+                                            <core:ListItem text="广西" key="210"></core:ListItem>
+                                            <core:ListItem text="贵州" key="220"></core:ListItem>
+                                            <core:ListItem text="四川" key="230"></core:ListItem>
+                                            <core:ListItem text="云南" key="240"></core:ListItem>
+                                            <core:ListItem text="陕西" key="250"></core:ListItem>
+                                            <core:ListItem text="甘肃" key="260"></core:ListItem>
+                                            <core:ListItem text="宁夏" key="270"></core:ListItem>
+                                            <core:ListItem text="青海" key="280"></core:ListItem>
+                                            <core:ListItem text="新疆" key="290"></core:ListItem>
+                                            <core:ListItem text="西藏" key="300"></core:ListItem>
+                                            <core:ListItem text="重庆" key="320"></core:ListItem>
+                                        </items>
+                                    </ComboBox>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*开始日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <DatePicker value="{newAddress>/Detail/KaiShiRiQi}" id="kaiShiRiQiCreate" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="*结束日期" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <DatePicker value="{newAddress>/Detail/JieShuRiQi}" id="jieShuRiQiCreate" valueFormat="yyyyMMdd"></DatePicker>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="城市/地区" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newAddress>/Detail/ChengShi}" id="chengShiCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="县代码" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newAddress>/Detail/Xian}" id="xianDaiMaCreate" />
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="详细地址" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newAddress>/Detail/XiangXiDiZhi}" id="xiangXiDiZhiCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="街道门牌号" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newAddress>/Detail/JieDao}" id="jieDaoMenPaiHaoCreate" />
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="幢" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newAddress>/Detail/Zhuang}" id="zhuangCreate"/>
+            </VBox>
+            </HBox>
+            
+            <HBox width="100%">
+            <VBox width="40%" direction="Column" >
+               <Text class="text" text="房间号" width="100%" textAlign="Center"/>
+            </VBox>
+            <VBox width="50%" >
+               <Input value="{newAddress>/Detail/FangJianHao}" id="fangJianHaoCreate" />
+            </VBox>
+            </HBox>
+            
+		</content>
+		<footer>
+		 	<Toolbar>
+                <content>
+                    <Button text="保存" type="Emphasized" press="onSave" />
+                    <!--<ToolbarSpacer/>-->
+                    <!--<Button text="取消" type="Emphasized" press="onCancel" class="button_style" />-->
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</core:View>

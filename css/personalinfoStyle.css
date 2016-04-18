@@ -1,0 +1,177 @@
+#idPersonalInfoMaster--_vbox01{
+    padding-top:0.5rem;
+    padding-left:0.7rem;
+}
+/*#__item2-img,#__item3-img,#__item4-img,#__item5-img,#__item6-img,#__item7-img,#__item8-img,#__item9-img,#__item10-img{*/
+/*    color: cornflowerblue;*/
+/*}*/
+.sapMSLIImgFirstIcon{
+    color: #04659B;
+} 
+/*.sapMTextMaxLine{*/
+/*  font-weight: bolder;*/
+/*  font-size: x-large;*/
+/*}*/
+
+
+#idPersonalInfoMaster .sapMCLI {
+    background-color:transparent;
+}
+
+.sapMTextLineClamp.sapMTextMaxLine{
+  color:#04659B;
+}
+.sapMObjLNumber.sapMObjLNumberStateNone{
+    font-size: smaller;
+    padding-top: 0.2rem;
+}
+#idPeopleAddrInfo--objectstatus{
+    font-family:Arial,Helvetica,sans-serif;
+}
+._vbox002{
+  padding-right: 0.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1rem;
+}
+.text{
+  padding-top: 8%;
+  padding-right: 0.5rem;
+  padding-bottom:0.5rem;
+  color: #04659B;
+}
+#idPersonalInfoMaster--_vbox02{
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  background-color: #DEF2EA;
+}
+.vbox01{
+  padding-right: 0.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: #04659B;
+  font-family:微软雅黑;
+}
+.vbox02{
+    padding-top:0.8rem;
+    font-family:微软雅黑;
+}
+.label_hbox{
+  padding-right: 0.5rem;
+  color: #04659B;
+  font-family:微软雅黑;
+}
+.text_hbox{
+    padding-top:0.8rem;
+    font-family:微软雅黑;
+}
+.sapMText{
+     font-family:微软雅黑;
+}
+.sapMIBar-CTX.sapMPageHeader .sapMLabel{
+    font-family:微软雅黑;
+}
+.sapUiFormResGrid{
+    background-color: white;
+}
+.vbox_text{
+      
+      padding-bottom: 0.5rem;
+      padding-right: 0.5rem;
+}
+.vbox_text02{
+      padding-top:5%;
+      /*padding-bottom: 0.5rem;*/
+      padding-left: 5%;
+}
+
+
+.address_ym{
+    padding-top:8%;
+}
+.vbox_text01{
+      padding-bottom: 0.5rem;
+      
+}
+
+/*lunchpad*/
+.sapUiIcon .sapUiIconMirrorInRTL{
+    line-height:0rem;
+}
+#idPersonalInfoMaster--vbox_text1{
+    color:#FF6600;
+}
+
+/*lager detail css*/
+#idContractDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idContractDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idPeopleDataInfo .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idPeopleDataInfo .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL1{
+    width:100%;
+}
+#idPeopleParty .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idPeopleParty .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idFamilyDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idFamilyDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idEducationDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idEducationDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idWorkDetailInfo .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idWorkDetailInfo .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idTechnologyDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idTechnologyDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idOccupationDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idOccupationDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idSkillsIdentificationDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idSkillsIdentificationDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL2{
+    width:100%;
+}
+#idExpertDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+#idExpertDetail .sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL4{
+    width:100%;
+}
+
+.sap-tablet .sapMDialog, .sap-desktop .sapMDialog{
+    min-width: 18rem;
+}
+
+
+/*个人信息 家庭*/
+.FMDisplay{
+    display:inline;
+}
+.FMNODisplay{
+    display:none;
+}

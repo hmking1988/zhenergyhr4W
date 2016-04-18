@@ -1,0 +1,25 @@
+<core:View controllerName="com.zhenergy.hr.view.roster.rosterMasterPage" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page navButtonPress="back" showNavButton="{device>/isPhone}" title="花名册">
+		<content>
+			<!--<StandardListItem type="Navigation" counter="0" title="张三"  info="人力资源部" press="toDeatil"></StandardListItem>-->
+			<!--<StandardListItem type="Navigation" counter="0" title="李四" info = "财务部"  press="toDeatil"></StandardListItem>-->
+			<List class="listclass" id="list" items="{/ER_ROSTER_SET}" mode="{device>/listMode}" select="">
+				<StandardListItem counter="0" info="{Bmmc}" press="toDeatil" title="{Name}" type="Navigation">
+					<customData>
+						<core:CustomData value="{Pernr}"></core:CustomData>
+						<core:CustomData value="{Usrid}"></core:CustomData>
+					</customData>
+				</StandardListItem> 
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<!--<ToolbarSpacer/>-->
+					<Button icon="sap-icon://home" press="back"></Button>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

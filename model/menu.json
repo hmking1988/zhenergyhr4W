@@ -1,0 +1,40 @@
+{
+    "Menu": [
+    {
+        "title": "休假申请",
+        "icon": "sap-icon://request",
+        "targetPage": "idleaveRequestSplitApp",
+        "group": "Client",
+        "number":"",
+		"numberUnit":"",
+        "info":"",
+        "infoState":"None"
+    },{
+        "title": "薪资查询",
+        "icon": "sap-icon://task",
+        "targetPage": "pageConsultantTask",
+        "group": "Consultant",
+        "number":"",
+		"numberUnit":"",
+        "info":"",
+        "infoState":"None"
+    },{
+        "title": "个人信息",
+        "icon": "sap-icon://email",
+        "targetPage": "pageMailBox",
+        "group": "Consultant",
+        "number":"",
+		"numberUnit":"",
+        "info":"",
+        "infoState":"None"
+    },{
+        "title": "设置",
+        "icon": "sap-icon://task",
+        "targetPage": "pageClientTask",
+        "group": "Client",
+        "number":"",
+		"numberUnit":"",
+        "info":"",
+        "infoState":"None"
+    }]
+}

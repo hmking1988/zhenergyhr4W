@@ -1,0 +1,52 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.personalinfo.PersonalInfoMaster"
+    xmlns="sap.m"
+    xmlns:sap.ui.core="sap.ui.core"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+   <Page title="个人信息" id="gerenxinxi" showNavButton="true" navButtonPress="back" >
+        <content>
+            <HBox width="100%">
+            <VBox width="20%" direction="Column" id="_vbox01">
+                <Image src="{ 
+								path: 'Uri', 
+								formatter: 'com.zhenergy.hr.js.formatter.PhotoURI'
+							}" width="50px" height="70px" id = "person_image" ></Image>
+            </VBox>
+            <List
+            id="list"
+            showSeparators="Inner"
+			mode="{device>/listMode}"
+			>
+			<CustomListItem type="Inactive" id="idmaster_list">
+            <VBox width="100%" direction="Column" class="personal_Vbox">
+                <Text text="{Name}" maxLines="0" class="master_list"></Text>
+                <Text text="{Pernr}" maxLines="0" id="vbox_text1" class="master_list"></Text>
+                <Text text="{Zzgsbh}" maxLines="0" class="master_list"></Text>
+                <Text text="{Position}" maxLines="0" class="master_list"></Text>
+                <Text text="{PersonalArea}" maxLines="0" class="master_list"></Text>
+            </VBox>
+            </CustomListItem>
+            </List>
+            </HBox>
+            <List noDataText="Drop list items here">
+                <items>
+                    <StandardListItem type="Navigation" counter="0" title="个人资料" icon="sap-icon://my-view"  press="handlepeopleListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="家庭及社会关系" icon="sap-icon://family-protection" press="handlefamilyListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="教育" icon="sap-icon://education" press="handleeducationListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="工作经历" icon="sap-icon://work-history" press="handleworkListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="合同要素" icon="sap-icon://account" press="handlecontractListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="专业技术资格" icon="sap-icon://attachment-photo" press="handletechnologyListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="执（职）业资格" icon="sap-icon://activity-individual" press="handleoccupationListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="技能鉴定" icon="sap-icon://inspection" press="handleskillsidentificationListItemPress"></StandardListItem>
+                    <StandardListItem type="Navigation" counter="0" title="专家人才信息" icon="sap-icon://study-leave" press="handleexpertListItemPress"></StandardListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <Toolbar>
+                <content>
+                <Button icon="sap-icon://home" press="back"></Button>
+                </content>
+            </Toolbar>
+        </footer>
+	</Page>
+</sap.ui.core.mvc:View>

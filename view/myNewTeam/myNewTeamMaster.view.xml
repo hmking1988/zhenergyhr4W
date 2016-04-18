@@ -1,0 +1,49 @@
+<core:View controllerName="com.zhenergy.hr.view.myNewTeam.myNewTeamMaster" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page navButtonPress="back" showNavButton="{device>/isPhone}" title="我的团队">
+		<content>
+			<List class="listclass" id="list">
+				<CustomListItem class="listclass" press="toDeatil" type="Navigation">
+					<HBox width="100%">
+						<VBox direction="Column" width="60%">
+							<HBox width="100%">
+								<VBox direction="Column" width="40%">
+									<Text class="myTeamText" text="{Name}" textAlign="Left" width="100%"/>
+								</VBox>
+								<VBox width="50%">
+									<Text class="myTeamText" text="{GenderTxt}" textAlign="Left" width="100%"/>
+								</VBox>
+							</HBox>
+							<Text class="myTeamText" text="{OrgehTxt}" textAlign="Left" width="100%"/>
+							<Text class="myTeamText" text="{PlansTxt}" textAlign="Left" width="100%"/>
+							<Text class="myTeamText" text="{TelOffice}" textAlign="Left" width="100%"/>
+							<Text class="myTeamText" text="{TelMobile}" textAlign="Left" width="100%"/>
+						</VBox>
+						<VBox width="40%">
+							<Image class="myNewTeamImage" height="98px" src="{ 
+								path: 'Photouri', 
+								formatter: 'com.zhenergy.hr.js.formatter.PhotoURI'
+							}"  width="70px"></Image>
+						</VBox>
+					</HBox>
+					<customData>
+						<core:CustomData value="{Pernr}"></core:CustomData>
+						<core:CustomData value="{Usrid}"></core:CustomData>
+						<core:CustomData value="{ 
+								path: 'Photouri', 
+								formatter: 'com.zhenergy.hr.js.formatter.PhotoURI'
+							}" ></core:CustomData>
+					</customData>
+				</CustomListItem>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<!--<ToolbarSpacer/>-->
+					<Button icon="sap-icon://home" press="back"></Button>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>

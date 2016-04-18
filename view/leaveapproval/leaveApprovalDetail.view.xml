@@ -1,0 +1,582 @@
+<sap.ui.core.mvc:View controllerName="com.zhenergy.hr.view.leaveapproval.leaveApprovalDetail" xmlns:sap.ui.core.mvc="sap.ui.core.mvc"
+	xmlns:sap.ui.core="sap.ui.core" xmlns="sap.m">
+	<Page navButtonPress="back" showFooter="{device>/isPhone}" showNavButton="{device>/isPhone}" title="审批详情">
+		<content>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="姓名">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="vbox_text02" id="namesp" text="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Ename}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="部门">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="vbox_text02" id="departmentsp" text="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/ZzbmbmTxt}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="岗位">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="vbox_text02" id="postsp" text="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/PlansTxt}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox height="30px">
+				<items>
+					<VBox alignItems="Start" direction="Column" justifyContent="Center" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="班组">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="vbox_text02" id="teamsp" text="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/ZzbzTxt}">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="请假类型">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Select id="typesp" items="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EtLeaType/item}" placeholder="请选择"
+								value="{path:'restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EtLeaType/item', formatter:'.typeFormat'}">
+								<sap.ui.core:Item key="{restDatasp>Subty}" text="{restDatasp>Stext}"/>
+							</Select>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="申请日期">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="datesp" type="Date"
+								value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Erdat}"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="开始日期">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="startDatesp" type="Date"
+								value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Begda}"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="开始时间">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="startTimesp" type="Time"
+								value="{path:'restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Begtim', formatter:'.timeFormat'}"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="结束日期">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="endDatesp" type="Date"
+								value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Endda}"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="结束时间">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<DateTimeInput class="sapUiSmallMarginBottom" id="endTimesp" type="Time"
+								value="{path:'restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Endtim', formatter:'.timeFormat'}"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="请假天数">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<Input class="sapUiSmallMarginBottom" id="restdayssp" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Qjts}"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="申请原因">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="reasonsp" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zwhy}" width="100%" wrapping="None">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox>
+				<items>
+					<VBox alignItems="Start" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="备注">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="remarkssp" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zbz}" width="100%" wrapping="None">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="bzsuggestion">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="班组意见" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="bztext" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zbzyj}" width="100%" wrapping="None"></TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="dpsuggestion">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="部门领导意见" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="dptext" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zbmyj}" width="100%" wrapping="None"></TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="hrsuggestion">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="HR意见" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="hrtext" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zhryj}" width="100%" wrapping="None"></TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="sleadersuggestion">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="分管领导意见" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="sleadertext" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zfgyj}" width="100%" wrapping="None"></TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="leadersuggestion">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="单位领导意见" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="leadertext" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zdwyj}" width="100%" wrapping="None"></TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="ghsuggestion">
+				<items>
+					<VBox direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="公会意见" textDirection="LTR" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Center"></FlexItemData>
+						</layoutData>
+						<items>
+							<TextArea id="ghtext" value="{restDatasp>/soap-env:Body/n0:ZfmBpmHrLeaveGetperinfoResponse/EsLeave/Zghyj}" width="100%" wrapping="None"></TextArea>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="Start" id="selection">
+				<items>
+					<VBox alignItems="Center" direction="Column" width="23%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Text class="text" text="下一位审批人">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Text>
+						</items>
+					</VBox>
+					<VBox alignItems="Start" direction="Column" width="77%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<ComboBox id="select" items="{selection>/soap-env:Body/n0:ZfmBpmHrLeaveGetSprResponse/EtLeaspAd/item}" placeholder="请选择下一位审批人">
+								<sap.ui.core:Item key="{selection>Usrid}" text="{selection>Nachn}"/>
+							</ComboBox>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox id="button1" justifyContent="SpaceAround">
+				<items>
+					<VBox alignItems="Center" direction="Column" justifyContent="Center" width="45%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Button press="submit" text="同意" type="Accept" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Button>
+						</items>
+					</VBox>
+					<VBox alignItems="Center" direction="Column" justifyContent="Center" width="45%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Button press="refuse" text="拒绝" type="Reject" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Button>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox alignItems="End" id="button2" justifyContent="Center">
+				<items>
+					<VBox alignItems="Center" direction="Column" justifyContent="Center" width="90%">
+						<layoutData>
+							<FlexItemData alignSelf="Stretch"></FlexItemData>
+						</layoutData>
+						<items>
+							<Button press="resub" text="确定" type="Emphasized" width="100%">
+								<layoutData>
+									<FlexItemData alignSelf="Stretch"></FlexItemData>
+								</layoutData>
+							</Button>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+		</content>
+		<footer>
+			<Bar>
+				<customData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+					<sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true"></sap.ui.core:CustomData>
+				</customData>
+				<contentLeft>
+					<Button Press="handlePressHome" icon="sap-icon://home"></Button>
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+</sap.ui.core.mvc:View>
